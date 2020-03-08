@@ -11,7 +11,7 @@ control 'ansible' do
     its('exit_status') { should eq 0 }
   end
   
-  describe command('find ansible/playbooks -name "*.yml" -type f -print0 | ANSIBLE_ROLES_PATH=ansible/roles xargs -0 -n1 ansible-lint --exclude=roles/jdauphant.nginx') do
+  describe command('find ansible/playbooks -name "*.yml" -type f -print0 | ANSIBLE_ROLES_PATH=ansible/roles xargs -0 -n1 ansible-lint --exclude=ansible/roles/jdauphant.nginx') do
     its('stderr') { should eq '' }
     its('exit_status') { should eq 0 }
   end
