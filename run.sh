@@ -13,8 +13,9 @@ if [ "$BRANCH" == "" ]; then
 fi
 
 echo HOMEWORK:$BRANCH
-
-echo "Clone repository with tests"
+echo "Remove OTUS repository with tests"
+rm -rf otus-homeworks
+echo "Clone My repository with tests"
 git clone -b $GROUP --single-branch $REPO
 
 if [ -f $HOMEWORK_RUN ]; then
