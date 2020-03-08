@@ -10,6 +10,8 @@ control 'packer' do
   files = [
     'packer/app.json',
     'packer/db.json',
+    'packer/immutable.json',
+    'packer/ubuntu16.json ',
     'packer/variables.json.example',
     'ansible/playbooks/packer_app.yml',
     'ansible/playbooks/packer_db.yml',
